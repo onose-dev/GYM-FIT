@@ -13,6 +13,7 @@
 
     /* Base */
     --background: #141414;
+    --background-light: #fffcf6;
     --text: #fafafa;
 
     /* Card */
@@ -70,13 +71,93 @@
     /* ----------------------------- */
     /* GLASSMORPHISM UTILS           */
     /* ----------------------------- */
-    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(18, 18, 18, 0.832);
     /* subtle glass */
     --glass-border: rgba(255, 255, 255, 0.12);
     --glass-blur: blur(12px);
 
     /* Elevation (soft shadows suitable for dark UI) */
-    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.25);
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
+
+/* nav */
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    padding: var(--space-md) var(--space-lg);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+}
+
+.navLogo {
+    font-size: var(--space-xl);
+}
+
+.navLogo span {
+    color: var(--primary);
+}
+
+.navLinks {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: var(--muted-text);
+    font-size: var(--space-md);
+    font-weight: 300;
+}
+
+nav button {
+    padding: var(--space-md) var(--space-xl);
+    color: var(--accent-text);
+    background-color: var(--primary);
+    border: none;
+    font-size: 1rem;
+    border: var(--glass-border);
+    box-shadow: var(--shadow-md);
+}
+
+/* Hero */
+.heroPage {
+    background-image: url(/Gymfit.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    ;
+}
+
+.heroPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.heroContent {
+    width: 50%;
+    height: 70%;
+    border: 2px solid red;
+}
+
+.heroPage span{
+    display: flex;
 }
