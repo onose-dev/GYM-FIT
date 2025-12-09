@@ -161,3 +161,112 @@ nav button {
 .heroPage span{
     display: flex;
 }
+
+/* --- Basic Structure & Form Container Styling --- */
+.contact {
+    display: flex; /* Assuming a two-column layout for your contact section */
+    /* Add any other layout styles for .contact here (e.g., gap, padding, max-width) */
+}
+
+.free-trial-form-container {
+    flex-grow: 1; /* Allows the form to take up available space */
+    padding: 30px;
+    background-color: #111111; /* Dark background color to mimic the image */
+    color: #ffffff; /* White text for contrast */
+    font-family: Arial, sans-serif; /* Use a common font */
+}
+
+/* --- Form Title Styling --- */
+.form-title {
+    font-size: 2.2em;
+    font-weight: 300; /* Lighter weight for "GET YOUR" */
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.form-title strong {
+    font-weight: 700; /* Bold for "FREE TRIAL" as in the image */
+}
+
+/* --- Form Layout and Input Styling --- */
+.free-trial-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    flex: 1; /* Makes input groups in a row share space */
+}
+
+.input-group label {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #cccccc; /* Slightly lighter text for labels */
+    margin-bottom: 8px;
+}
+
+.free-trial-form input,
+.free-trial-form textarea {
+    padding: 12px 10px;
+    background-color: #333333; /* Darker input background */
+    border: 1px solid #555555; /* Subtle border */
+    color: #ffffff; /* White text inside inputs */
+    font-size: 1em;
+    /* This box shadow helps create the glowing/reflective effect from the image */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s;
+}
+
+.free-trial-form input:focus,
+.free-trial-form textarea:focus {
+    border-color: #888888;
+    outline: none;
+}
+
+.free-trial-form textarea {
+    resize: none; /* Prevent manual resizing of the goals box */
+}
+
+/* --- Submit Button Styling --- */
+.claim-button {
+    background-color: #FFDA44; /* Bright yellow/gold color */
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    width: 100%; /* Full width as in the image */
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.claim-button:hover {
+    background-color: #ffe06b; /* Slightly lighter on hover */
+}
+
+/* Optional: Placeholder styling for better contrast on dark background */
+::placeholder {
+    color: #aaaaaa;
+    opacity: 1;
+}
+
+/* --- Responsive adjustment for smaller screens --- */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
