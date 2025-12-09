@@ -102,6 +102,7 @@ nav {
     align-items: center;
     background-color: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
+    z-index: 100;
     border: 1px solid var(--glass-border);
 }
 
@@ -126,7 +127,7 @@ nav {
 }
 
 nav button {
-    padding: var(--space-md) var(--space-xl);
+    padding: var(--space-sm) var(--space-xl);
     color: var(--accent-text);
     background-color: var(--primary);
     border: none;
@@ -136,28 +137,83 @@ nav button {
 }
 
 /* Hero */
+
 .heroPage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-image: url(/Gymfit.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
-    ;
+    height: 110vh;
+    padding: .2rem 1rem;
+    z-index: 1;
 }
 
-.heroPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.heroPage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100em;
+    height: 100%;
+    background-color: #141414b6;
+    z-index: 2;
 }
+
 
 
 .heroContent {
+    position: absolute;
+    top: 4rem;
     width: 50%;
-    height: 70%;
-    border: 2px solid red;
+    height: 60%;
+    padding: 1rem;
+    z-index: 3;
 }
 
-.heroPage span{
+.heroPage span {
     display: flex;
+    gap: 1rem;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.heroPage span p {
+    color: var(--primary);
+}
+
+
+.heroContent h1 {
+    font-size: 8rem;
+    font-weight: 400;
+}
+
+.heroContent span {
+    color: var(--primary);
+    font-size: 8rem;
+    font-weight: 400;
+}
+
+.heroContent p {
+    color: var(--muted-text);
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.cta-btns{
+    display: flex;
+    gap: 1rem;
+}
+
+.cta-btns button{
+    color: var(--accent-text);
+    padding: 1rem 6rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    background-color: var(--primary);
+    
 }
